@@ -1,10 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-        <title>Messenger</title>
-	</head>
-	<body>
-		<!--	WEBSITE BODY	-->
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <style> /*styling and sizes*/
+		h1 {
+        	font-size: 45px;
+    	}
+        body {
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+        .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            text-align: center;
+            height: 32px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+			width: 410px;
+        }
+        .custom-input {
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background-color: lightgray;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding-left: 15px;
+            height: 35px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            text-align: left;
+            box-sizing: border-box;
+            margin-bottom: 15px; 
+			width: 410px;
+        }
+        .container {
+            text-align: center;
+        }
+		#registrationForm, #sendMessage {
+    		margin-bottom: 70px;
+		}
+		#sendMessage [type="text"]#message {
+    		height: 70px;
+		}
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <h1>Welcome To The River</h1>
+
+    <form id="registrationForm">
+        <input type="text" id="username" name="username" placeholder="Enter your username" class="custom-input"required>
+
+        <input type="password" id="password" name="password" placeholder="Enter your password" class="custom-input"required>
+
+        <button type="button" onclick="registerUser()" class="button">Register</button>
+    </form>
+
+    <div id="serverResponse"></div>
+
+	<form id="sendMessage">
+        <input type="text" id="username1" name="username1" placeholder="Enter receivers username" class="custom-input"required>
+
+        <input type="text" id="message" name="message" placeholder="Enter your message" class="custom-input"required>
+
+        <button type="button" onclick="sendMessage()" class="button">Send Message</button>
+    </form>
+
+    <div id="serverResponse"></div>
+
+    <form id="checkMessages">
+        <input type="text" id="username2" name="username2" placeholder="Enter your username" class="custom-input"required>
+
+        <input type="password" id="password1" name="password1" placeholder="Enter your password" class="custom-input"required>
+
+        <button type="button" onclick="checkMessages()" class="button">View Inbox</button>
+    </form>
+
+    <div id="serverResponse"></div>
+    
+</div>
+<script src="script.js"></script>
+</body>
 </html>
+
